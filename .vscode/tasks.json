@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "build test",
+            "command": "/usr/bin/gcc",
+            "args": ["tests/test.c", "-g", "-o", "test", "`", "pkg-config", "--cflags", "--libs", "gstreamer-1.0", "gstreamer-audio-1.0", "`"],
+            "options": {
+            "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
